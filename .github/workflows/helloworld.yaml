@@ -27,7 +27,8 @@ jobs:
         run: |
             echo "Hello, GitHub Actions! Welcome to the course."
             echo ${{ inputs.my_input }}
-            echo This is a test secret ${{ secrets.TEST_SECRET }}
+            echo "This is a test secret ${{ secrets.TEST_SECRET }}"
+            echo "This is my first variable usage ${{ vars.FIRST_VARIABLE }}"
 
       - name: Print date and time
         run: |
