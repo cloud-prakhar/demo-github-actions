@@ -6,8 +6,6 @@ on:
         my_input:
             type: string
             description: manual inputs
-            default: "This is my Input"
-            required: true
   push:
     branches:
       - main          # Only trigger on pushes to "main", not other branches
@@ -29,6 +27,7 @@ jobs:
         run: |
             echo "Hello, GitHub Actions! Welcome to the course."
             echo ${{ inputs.my_input }}
+            echo ${{ secrets.TEST_SECRET }}
 
       - name: Print date and time
         run: |
