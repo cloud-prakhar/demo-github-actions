@@ -1,6 +1,8 @@
 name: Hello World Workflow
 
 on:
+  workflow_dispatch:
+    
   push:
     branches:
       - main          # Only trigger on pushes to "main", not other branches
