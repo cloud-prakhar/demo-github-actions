@@ -77,4 +77,13 @@ jobs:
       - name: Say Good Bye
         run: |
           echo "Say good bye to everyone"
+
+  dontsaygooodbye:
+    needs: helloworld
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Don't say good bye
+        run: |
+          echo "I am not ready to go"
     
