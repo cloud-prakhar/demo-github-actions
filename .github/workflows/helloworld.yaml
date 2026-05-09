@@ -67,14 +67,13 @@ jobs:
           echo ""
           echo "Files in the workspace:"
           ls -la $GITHUB_WORKSPACE
+    
+  goodbye:
+    needs: helloworld
+    runs-on: ubuntu-latest
 
-      - name: Congratulations message
+    steps:
+      - name: Say Good Bye
         run: |
-          echo ""
-          echo "╔════════════════════════════════════════╗"
-          echo "║  You just ran your first workflow!     ║"
-          echo "║  Welcome to GitHub Actions!            ║"
-          echo "║                                        ║"
-          echo "║  Next: Module 04 — Workflow Triggers   ║"
-          echo "╚════════════════════════════════════════╝"
-          echo ""
+          echo "Say good bye to everyone"
+    
