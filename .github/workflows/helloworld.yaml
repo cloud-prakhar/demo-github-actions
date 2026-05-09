@@ -70,6 +70,7 @@ jobs:
     
   goodbye:
     needs: helloworld
+    if: failure()
     runs-on: ubuntu-latest
 
     steps:
