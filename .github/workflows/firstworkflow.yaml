@@ -19,6 +19,7 @@ jobs:
               run: |
                 echo "Hello World"
                 echo "This is my first workflow"
+                pwd
 
 
 
