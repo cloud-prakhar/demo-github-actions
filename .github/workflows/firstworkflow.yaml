@@ -2,6 +2,10 @@ name: My First Workflow
 
 on: 
     workflow_dispatch: 
+        inputs: 
+            my_input:
+                type: string
+                description: My manual Input
     push:
         branches:
             - main
@@ -25,6 +29,7 @@ jobs:
                 chmod +x scripts/script.sh
                 cd scripts
                 ./script.sh
+                echo "My manual input is ${{ inputs.my_input }}
             
             - name: Print GitHub context info
               run: |
