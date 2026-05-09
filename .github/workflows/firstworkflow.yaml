@@ -20,6 +20,9 @@ jobs:
                 echo "Hello World"
                 echo "This is my first workflow"
                 pwd
+                chmod +x scripts/script.sh
+                cd scripts
+                ./script.sh
 
 
 
