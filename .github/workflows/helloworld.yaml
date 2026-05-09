@@ -2,7 +2,12 @@ name: Hello World Workflow
 
 on:
   workflow_dispatch:
-    
+    inputs:
+        my_input:
+            type: string
+            description: manual inputs
+            default: "This is my Input"
+            required: true
   push:
     branches:
       - main          # Only trigger on pushes to "main", not other branches
@@ -21,7 +26,9 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Say hello
-        run: echo "Hello, GitHub Actions! Welcome to the course."
+        run: |
+            echo "Hello, GitHub Actions! Welcome to the course."
+            echo ${{ inputs.my_input }}
 
       - name: Print date and time
         run: |
