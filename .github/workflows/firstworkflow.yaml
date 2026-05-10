@@ -47,6 +47,20 @@ jobs:
                 echo "  Run ID:                 ${{ github.run_id }}"
                 echo "============================================"
 
+    second-run:
+        runs-on: ubuntu-latest
+
+        steps:
+
+            - name: Checkout Repository
+              uses: actions/checkout@v6
+
+            - name: Say Hello Again
+              run: |
+                echo "Hello Again World"
+                echo "This is my second job in the workflow"
+                pwd
+
 
 
 
