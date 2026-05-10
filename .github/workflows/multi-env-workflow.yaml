@@ -12,11 +12,17 @@ on:
                     - uat
                     - prod
 
+env:
+    var: "This is a variable available in all environments"
+
 jobs:
 
     multi-env-run:
+        name: multi-env-run-${{ inputs.environment }}
         runs-on: ubuntu-latest
         environment: ${{ inputs.environment }}
+        env:
+            ENVIRONMENT: ${{ inputs.environment }}
 
         steps:
 
