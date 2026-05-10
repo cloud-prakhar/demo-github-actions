@@ -61,6 +61,22 @@ jobs:
                 echo "Hello Again World"
                 echo "This is my second job in the workflow"
                 pwd
+    
+    third-run:
+        runs-on: ubuntu-latest
+        needs: [first-run, second-run]
+        if: failure()
+
+        steps:
+
+            - name: Checkout Repository
+              uses: actions/checkout@v6
+
+            - name: Say Hello Again Again
+              run: |
+                echo "Hello Again Again World"
+                echo "This is my third job in the workflow"
+                pwd
 
 
 
