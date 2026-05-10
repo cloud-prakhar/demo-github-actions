@@ -50,6 +50,7 @@ jobs:
     second-run:
         runs-on: ubuntu-latest
         needs: first-run
+        if: failure()
 
         steps:
 
