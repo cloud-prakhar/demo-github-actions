@@ -24,7 +24,7 @@ jobs:
             - name: Say Hello
               run: |
                 echo "Hello World"
-                echo "This is my first workflow
+                echo "This is my first workflow"
                 pwd
                 chmod +x scripts/script.sh
                 cd scripts
