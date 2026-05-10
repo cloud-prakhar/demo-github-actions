@@ -23,23 +23,23 @@ jobs:
             - name: Checkout Repository
               uses: actions/checkout@v4
 
-            - name: Deploy to Environment
-              run: |
-                echo "Deploying to ${{ inputs.environment }} environment"
-                # Add your deployment commands here based on the selected environment
-                if [ "${{ inputs.environment }}" == "dev" ]; then
-                    echo "Running deployment script for DEV environment"
-                    echo "This is the DEV environment. My variable is ${{ vars.var }}"
-                elif [ "${{ inputs.environment }}" == "uat" ]; then
-                    echo "Running deployment script for UAT environment"
-                    echo "This is the UAT environment. My variable is ${{ vars.var }}"
-                elif [ "${{ inputs.environment }}" == "prod" ]; then
-                    echo "Running deployment script for PROD environment"
-                    echo "This is the PROD environment. My variable is ${{ vars.var }}"
-                else
-                    echo "Invalid environment selected"
-                    exit 1
-                fi
+            # - name: Deploy to Environment
+            #   run: |
+            #     echo "Deploying to ${{ inputs.environment }} environment"
+            #     # Add your deployment commands here based on the selected environment
+            #     if [ "${{ inputs.environment }}" == "dev" ]; then
+            #         echo "Running deployment script for DEV environment"
+            #         echo "This is the DEV environment. My variable is ${{ vars.var }}"
+            #     elif [ "${{ inputs.environment }}" == "uat" ]; then
+            #         echo "Running deployment script for UAT environment"
+            #         echo "This is the UAT environment. My variable is ${{ vars.var }}"
+            #     elif [ "${{ inputs.environment }}" == "prod" ]; then
+            #         echo "Running deployment script for PROD environment"
+            #         echo "This is the PROD environment. My variable is ${{ vars.var }}"
+            #     else
+            #         echo "Invalid environment selected"
+            #         exit 1
+            #     fi
 
             - name: Env Context Information
               run: |
