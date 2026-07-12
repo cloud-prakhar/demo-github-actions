@@ -1,11 +1,11 @@
 name: Hello World Workflow
 
 on:
-  workflow_dispatch:
-    inputs:
-        my_input:
-            type: string
-            description: manual inputs
+  # workflow_dispatch:
+  #   inputs:
+  #       my_input:
+  #           type: string
+  #           description: manual inputs
   push:
     branches:
       - main          # Only trigger on pushes to "main", not other branches
