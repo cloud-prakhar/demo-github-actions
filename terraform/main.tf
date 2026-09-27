@@ -23,3 +23,7 @@ output "example_message" {
 output "example_message_2" {
   value = terraform_data.example.output.message
 }
+
+output "example_message_3" {
+  value = terraform_data.demo.output.message
+}
